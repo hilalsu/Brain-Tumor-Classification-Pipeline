@@ -1,0 +1,25 @@
+2026-03-25 16:25:34 [INFO] brain_tumor: Starting pipeline
+2026-03-25 16:25:34 [INFO] brain_tumor: Config: PipelineConfig(output_base_dir='C:\\Users\\hilal\\Desktop\\beyin\\brain_tumor_pipeline\\outputs', seed=42, data=DataConfig(dataset_root='C:\\Users\\hilal\\Desktop\\beyin\\dataset', training_dirname='Training', testing_dirname='Testing', class_names=None, image_size=224, val_fraction=0.2, enable_augmentation=False, enable_class_balance=True, max_images_per_class=50), feature_extractor=FeatureExtractorConfig(backbones=['efficientnet_b0', 'resnet50'], batch_size=16, num_workers=0, use_amp=True), fusion=FeatureFusionConfig(use_standard_scaler=True), feature_selection=FeatureSelectionConfig(population_size=3, max_iterations=5, top_k_history=8, a_decay_power=1.5, stagnation_patience=12, reinitialize_every=0, mutation_flip_prob=0.01, svm_C=1.0, svm_gamma='scale', cv_folds=3, min_features=5, max_features=20, enable_preselection=True, preselect_k=800, preselect_method='f_classif', lambda_size_start=0.05, lambda_size_end=0.25, seed=42, min_accuracy_gain_tol=0.0001), models=ModelTrainingConfig(random_state=42, tune_hyperparameters=False, xgb_max_estimators=400), device=None)
+2026-03-25 16:25:34 [INFO] brain_tumor: Resolved dataset_root: C:\Users\hilal\Desktop\beyin\dataset
+2026-03-25 16:25:34 [INFO] brain_tumor: Resolved output_base_dir: C:\Users\hilal\Desktop\beyin\brain_tumor_pipeline\outputs
+2026-03-25 16:25:34 [INFO] brain_tumor: Resolved out_dir: C:\Users\hilal\Desktop\beyin\brain_tumor_pipeline\outputs\run_20260325_132534_utc
+2026-03-25 16:25:36 [INFO] brain_tumor: Classes: ['glioma', 'meningioma', 'notumor', 'pituitary']
+2026-03-25 16:25:37 [INFO] brain_tumor: Class balance enabled: oversampled train size=160
+2026-03-25 16:25:37 [INFO] brain_tumor: Using device: cpu
+2026-03-25 16:25:37 [INFO] brain_tumor: Extracting features for backbones: ['efficientnet_b0', 'resnet50']
+2026-03-25 16:25:37 [INFO] brain_tumor: Extracting backbone: efficientnet_b0
+2026-03-25 16:26:11 [INFO] brain_tumor: Backbone=efficientnet_b0, feature_dim=1280
+2026-03-25 16:26:11 [INFO] brain_tumor: Extracting backbone: resnet50
+2026-03-25 16:28:11 [INFO] brain_tumor: Backbone=resnet50, feature_dim=2048
+2026-03-25 16:28:11 [INFO] brain_tumor: Fused feature dimension: 3328
+2026-03-25 16:28:11 [INFO] brain_tumor: Preselecting candidates for GWO: method=f_classif, k=800 (from d_total=3328)
+2026-03-25 16:28:11 [INFO] brain_tumor: GWO candidate count: 800
+2026-03-25 16:28:11 [INFO] brain_tumor: Running GWO feature selection (may take time)...
+2026-03-25 16:28:11 [INFO] brain_tumor: GWO finished in 0.44s
+2026-03-25 16:28:11 [INFO] brain_tumor: Selected 20 features (CV acc=0.4495)
+2026-03-25 16:28:14 [INFO] brain_tumor: Saved GWO artifacts (json + convergence plot).
+2026-03-25 16:28:14 [INFO] brain_tumor: Training classifiers...
+2026-03-25 16:28:20 [INFO] brain_tumor: Classifier evaluation finished in 6.80s
+2026-03-25 16:28:20 [INFO] brain_tumor: Number of evaluated models: 5
+2026-03-25 16:28:20 [INFO] brain_tumor: Best model=mlp, metrics={'accuracy': 0.21, 'precision': 0.2029514643391762, 'recall': 0.21000000000000002, 'f1_score': 0.20502530165285845, 'roc_auc': 0.4402666666666667}
+2026-03-25 16:28:26 [INFO] brain_tumor: Saved CSV metrics to: C:\Users\hilal\Desktop\beyin\brain_tumor_pipeline\outputs\run_20260325_132534_utc\all_results.csv

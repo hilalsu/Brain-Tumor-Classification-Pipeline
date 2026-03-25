@@ -1,0 +1,70 @@
+{
+  "class_names": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ],
+  "best_feature_subset_size": 20,
+  "best_model": "mlp",
+  "best_model_metrics": {
+    "accuracy": 0.21,
+    "precision": 0.2029514643391762,
+    "recall": 0.21000000000000002,
+    "f1_score": 0.20502530165285845,
+    "roc_auc": 0.4402666666666667
+  },
+  "warning": null,
+  "results": [
+    {
+      "model_name": "knn",
+      "metrics": {
+        "accuracy": 0.175,
+        "precision": 0.15968720821661997,
+        "recall": 0.175,
+        "f1_score": 0.16540292689487102,
+        "roc_auc": 0.40459999999999996
+      }
+    },
+    {
+      "model_name": "random_forest",
+      "metrics": {
+        "accuracy": 0.17,
+        "precision": 0.17271659111823046,
+        "recall": 0.17,
+        "f1_score": 0.17009474992233614,
+        "roc_auc": 0.3923166666666667
+      }
+    },
+    {
+      "model_name": "svm_rbf",
+      "metrics": {
+        "accuracy": 0.155,
+        "precision": 0.15135816525699414,
+        "recall": 0.15499999999999997,
+        "f1_score": 0.15123048518034382,
+        "roc_auc": 0.35686666666666667
+      }
+    },
+    {
+      "model_name": "mlp",
+      "metrics": {
+        "accuracy": 0.21,
+        "precision": 0.2029514643391762,
+        "recall": 0.21000000000000002,
+        "f1_score": 0.20502530165285845,
+        "roc_auc": 0.4402666666666667
+      }
+    },
+    {
+      "model_name": "xgboost",
+      "metrics": {
+        "accuracy": 0.18,
+        "precision": 0.19204980306613634,
+        "recall": 0.18,
+        "f1_score": 0.1831021606182018,
+        "roc_auc": 0.41036666666666666
+      }
+    }
+  ]
+}
