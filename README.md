@@ -1,4 +1,8 @@
 # Brain Tumor Classification Pipeline
+![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
+![Status](https://img.shields.io/badge/status-Completed-success)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 MRI görüntülerinden beyin tümörü sınıflandırması yapan uçtan uca bir makine öğrenmesi pipeline'ı.
 Derin özellik çıkarımı, Grey Wolf Optimization (GWO) tabanlı özellik seçimi ve çoklu sınıflandırıcı
