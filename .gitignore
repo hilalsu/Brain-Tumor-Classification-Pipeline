@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Outputs (çok önemli)
+outputs/
+brain_tumor_pipeline/outputs/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter (varsa)
+.ipynb_checkpoints/
+
+# Env
+venv/
+.env
