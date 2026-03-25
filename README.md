@@ -42,17 +42,12 @@ değerlendirmesini bir arada sunar.
 
 Bu pipeline, 4 sınıflı beyin tümörü MRI veri seti üzerinde çalışır:
 
-| Sınıf | Açıklama |
-
-|---|---|
-
-| `glioma` | Glioma tümörü |
-
+|     Sınıf    |      Açıklama     |
+|--------------|-------------------|
+| `glioma`     | Glioma tümörü     |
 | `meningioma` | Meningioma tümörü |
-
-| `pituitary` | Hipofiz tümörü |
-
-| `notumor` | Tümör yok |
+| `pituitary`  | Hipofiz tümörü    |
+| `notumor`    | Tümör yok         |
 
 Pipeline, klasik "end-to-end deep learning" yaklaşımı yerine hibrit bir yaklaşım kullanır:
 
@@ -286,39 +281,23 @@ python brain_tumor_pipeline/run_pipeline.py --device cuda
 
 ### Tüm CLI Argümanları
 
-| Argüman | Varsayılan | Açıklama |
-
-|---|---|---|
-
-| `--dataset-root` | `dataset` | Veri seti kök klasörü |
-
-| `--output-base-dir` | `brain_tumor_pipeline/outputs` | Çıktı klasörü |
-
-| `--seed` | `42` | Rastgelelik tohumu |
-
-| `--device` | otomatik | `cpu`, `cuda`, `cuda:0` |
-
-| `--image-size` | `224` | Görüntü boyutu (px) |
-
-| `--val-fraction` | `0.2` | Validasyon oranı |
-
-| `--no-augmentation` | kapalı | Augmentasyonu devre dışı bırak |
-
-| `--no-class-balance` | kapalı | Oversampling'i devre dışı bırak |
-
-| `--imagenet-normalize` | kapalı | ImageNet mean/std normalizasyonu |
-
-| `--contrast-method` | `clahe` | `clahe` veya `hist_equal` |
-
-| `--max-images-per-class` | `None` | Sınıf başına max görüntü sayısı |
-
-| `--min-features` | `20` | GWO min özellik sayısı |
-
-| `--max-features` | `250` | GWO max özellik sayısı |
-
-| `--population-size` | `30` | GWO popülasyon büyüklüğü |
-
-| `--max-iterations` | `80` | GWO iterasyon sayısı |
+|         Argüman          |            Varsayılan          |             Açıklama             |
+|--------------------------|- ------------------------------| ---------------------------------|
+| `--dataset-root`         | `dataset`                      | Veri seti kök klasörü            |
+| `--output-base-dir`      | `brain_tumor_pipeline/outputs` | Çıktı klasörü                    |
+| `--seed`                 | `42`                           | Rastgelelik tohumu               |
+| `--device`               | otomatik                       | `cpu`, `cuda`, `cuda:0`          |
+| `--image-size`           | `224`                          | Görüntü boyutu (px)              |
+| `--val-fraction`         | `0.2`                          | Validasyon oranı                 |
+| `--no-augmentation`      | kapalı                         | Augmentasyonu devre dışı bırak   |
+| `--no-class-balance`     | kapalı                         | Oversampling'i devre dışı bırak  |
+| `--imagenet-normalize`   | kapalı                         | ImageNet mean/std normalizasyonu |
+| `--contrast-method`      | `clahe`                        | `clahe` veya `hist_equal`        |
+| `--max-images-per-class` | `None`                         | Sınıf başına max görüntü sayısı  |
+| `--min-features`         | `20`                           | GWO min özellik sayısı           |
+| `--max-features`         | `250`                          | GWO max özellik sayısı           |
+| `--population-size`      | `30`                           | GWO popülasyon büyüklüğü         |
+| `--max-iterations`       | `80`                           | GWO iterasyon sayısı             |
 
 ---
 
@@ -496,11 +475,11 @@ python brain_tumor_pipeline/run_pipeline.py --max-images-per-class 50
 
 ## Performans Notları
 
-| Senaryo | Tahmini Süre |
-|---|---|
-| Küçük test (50 görüntü/sınıf, CPU) | ~3-5 dk |
-| Tam dataset, CPU | ~2-4 saat |
-| Tam dataset, GPU | ~15-30 dk |
+|               Senaryo              | Tahmini Süre |
+|------------------------------------|--------------|
+| Küçük test (50 görüntü/sınıf, CPU) | ~3-5 dk      |
+| Tam dataset, CPU                   | ~2-4 saat    |
+| Tam dataset, GPU                   | ~15-30 dk    |
 
 
 ### Ipuçları
