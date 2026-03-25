@@ -363,7 +363,7 @@ Pipeline çalışması:
 ## Örnek Çıktılar
 
 ### Confusion Matrix
-![Confusion Matrix](assets/confusion_matrix.png)
+![Confusion Matrix](outputs\run_20260325_132534_utc)
 
 ### ROC Curve
 ![ROC](assets/roc_curve.png)
