@@ -494,15 +494,14 @@ python brain_tumor_pipeline/run_pipeline.py --max-images-per-class 50
 
 ## Performans Notları
 
+## Performans Notları
+
 | Senaryo | Tahmini Süre |
-
 |---|---|
-
 | Küçük test (50 görüntü/sınıf, CPU) | ~3-5 dk |
-
 | Tam dataset, CPU | ~2-4 saat |
-
 | Tam dataset, GPU | ~15-30 dk |
+
 
 ### Ipuçları
 
